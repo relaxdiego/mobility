@@ -28,8 +28,11 @@ Installation
 
    pip install -r requirements.txt
 
-3. Copy `config.yml.example` to `config.yml` in the same directory. Feel
-   free to look inside the file and understand what the settings are.
+3. Copy `config.yml.example` to `config.yml` in the same directory.
+
+4. Edit `config.yml`. Replace placeholder values (i.e. values surrounded
+   by < and >) with real values. See `config.yml` for instructions.
+
 
 Run the Sample App
 ------------------
