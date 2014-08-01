@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    This uses the Jinja library to dynamically render
+    data provided by the code in main.py http://jinja.pocoo.org/
+  -->
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>Home Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Maps</h1>
+        <ul>
+        {% for campus in maps['Maps']['Campus'] %}
+            <li>
+                {{ campus['name'] }} campus
+                <ul>
+                {% for building in campus['Building'] %}
+                    <li>
+                        {{ building['name'] }} building
+                        <ul>
+                        {% for floor in building['Floor'] %}
+                            <li>
+                                {{ floor['name'] }} floor
+                                <ul>
+                                    <li>Zones:
+                                        <ul>
+                                        {% for zone in floor['Zone'] %}
+                                            <li>
+                                                {{ zone['name'] }}
+                                            </li>
+                                        {% endfor %}
+                                        </ul>
+                                    </li>
+                                    <li>Obstacles:
+                                        <ul>
+                                        {% for obstacle in floor['Obstacle'] %}
+                                            <li>
+                                                {{ obstacle['name'] }}
+                                            </li>
+                                        {% endfor %}
+                                        </ul>
+                                    </li>
+                                    <li>Access Points:
+                                        <ul>
+                                        {% for ap in floor['AccessPoint'] %}
+                                            <li>
+                                                {{ ap['name'] }}
+                                            </li>
+                                        {% endfor %}
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

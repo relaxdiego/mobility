@@ -1,0 +1,26 @@
+#
+# Copy (DO NOT RENAME) this file as config.yml
+#
+# Any line beginning with '#' are comments that
+# are ignored by your application.
+#
+
+# Hostname of the MSE API endpoint
+hostname: <get this from https://devnetsandbox.cisco.com>
+
+# Port number of the MSE API. Usually 443
+port: 443
+
+# Should your app care about the validity
+# of the MSE server's SSL certificate. Keep
+# it at 'false' for now.
+verify_ssl: false
+
+# The MSE API version to use.
+api_version: v1
+
+# Username and password to use when your
+# app connects to the MSE API.
+auth:
+  username: <get this from https://devnetsandbox.cisco.com>
+  password: <get this from https://devnetsandbox.cisco.com>
