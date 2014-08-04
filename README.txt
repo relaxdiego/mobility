@@ -26,7 +26,7 @@ Installation
 
    cd <foldername>
 
-   pip install -r requirements.txt
+   sudo pip install -r requirements.txt
 
 3. Copy `config.yml.example` to `config.yml` in the same directory.
 
@@ -40,6 +40,10 @@ Run the Sample App
 1. Run the following in your terminal:
 
    python mobility/app/main.py
+
+   NOTE: This runs the web server on the terminal. You will now see
+   it outputting logs and will continue to do so until you terminate
+   it. Leave it as is and proceed to the next step.
 
 2. Point your browser to http://localhost:5000
 
